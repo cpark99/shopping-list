@@ -30,7 +30,6 @@ $(function() {
   // when check is clicked,
   $('ul').on('click', '.shopping-item-toggle', function(event) {
     // target the <li> parent
-    console.log($(this));
     const selected = $(this).closest('ul');
     // target <span> and toggle class
     selected.children('li').children('span').toggleClass('shopping-item__checked');
@@ -38,6 +37,9 @@ $(function() {
   });
 
   // when delete is clicked
-  
+  $('ul').on('click', '.shopping-item-delete', function(event) {
+    // target the <li> and remove
+    $(this).closest('li').remove();
+  });
   
 })
