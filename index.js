@@ -33,7 +33,6 @@ $(function() {
     const selected = $(this).closest('ul');
     // target <span> and toggle class
     selected.children('li').children('span').toggleClass('shopping-item__checked');
-    console.log(selected.children('li').children('span'));
   });
 
   // when delete is clicked
