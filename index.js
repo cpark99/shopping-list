@@ -29,16 +29,12 @@ $(function() {
 
   // when check is clicked,
   $('ul').on('click', '.shopping-item-toggle', function(event) {
-    // target the <li> parent
     const selected = $(this).closest('ul');
-    // target <span> and toggle class
-    selected.children('li').children('span').toggleClass('shopping-item__checked');
+    $(this).closest('li').children('span').toggleClass('shopping-item__checked');
   });
 
   // when delete is clicked
   $('ul').on('click', '.shopping-item-delete', function(event) {
-    // target the <li> and remove
     $(this).closest('li').remove();
   });
-  
 })
